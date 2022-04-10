@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <nav>
+        <div>Today's Deals</div>
+        <div>Customer Service</div>
+        <div>Buy Again</div>
+        <div>Browsing History</div>
+        <div>Gift Cards</div>
+        <div>Registry</div>
+        <div>Sell</div>
+    </nav>
+    <main>
+        <div id="product-view">
+            <div class="preview-image">
+                <div id="preview-enlarged">
+                    <img src="imgs/1.jpg" class="preview-img show" />
+                </div>
+                <div id="thumbnail-container">
+                    <img class="thumbnail focused" src="imgs/1.jpg" />
+                    <img class="thumbnail" src="imgs/2.jpg" />
+                    <img class="thumbnail" src="imgs/3.jpg" />
+                    <img class="thumbnail" src="imgs/4.jpg" />
+                    <img class="thumbnail" src="imgs/5.jpg" />
+                    <img class="thumbnail" src="imgs/6.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title">AMD Ryzen 9 5900X 12-core, 24-Thread Unlocked Desktop Processor</div>
+            <table class="a-normal a-spacing-micro">
+                <tbody>
+                    <tr class="a-spacing-small po-brand">
+                        <td> <span class="a-size-base a-text-bold">Brand</span> </td>
+                        <td> <span class="a-size-base">AMD</span> </td>
+                    </tr>
+                    <tr class="a-spacing-small po-cpu_model.manufacturer">
+                        <td> <span class="a-size-base a-text-bold">CPU Manufacturer</span> </td>
+                        <td> <span class="a-size-base">AMD</span> </td>
+                    </tr>
+                    <tr class="a-spacing-small po-cpu_model.family">
+                        <td > <span class="a-size-base a-text-bold">CPU Model</span> </td>
+                        <td > <span class="a-size-base">Ryzen 9</span> </td>
+                    </tr>
+                    <tr class="a-spacing-small po-cpu_model.speed">
+                        <td > <span class="a-size-base a-text-bold">CPU Speed</span> </td>
+                        <td > <span class="a-size-base">4.8 GHz</span> </td>
+                    </tr>
+                    <tr class="a-spacing-small po-cpu_model.socket">
+                        <td > <span class="a-size-base a-text-bold">CPU Socket</span> </td>
+                        <td > <span class="a-size-base">Socket AM4</span> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="about">
+                About this item
+                <ul>
+                    <li> The world's best gaming desktop processor, with 12 cores and 24 processing threads</li>
+                    <li>Can deliver elite 100-plus FPS performance in the world's most popular games</li>
+                    <li>4.8 GHz Max Boost, unlocked for overclocking, 70 MB of cache, DDR-3200 support</li>
+                    <li>Cooler not included, high-performance cooler recommended. Max Temperature- 90°C</li>
+                    <li>For the advanced Socket AM4 platform, can support PCIe 4.0 on X570 and B550 motherboards</li>
+                </ul>
+
+
+
+
+
+            </div>
+            <div class="small">
+                Note: Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    $("#thumbnail-container img").click(function () {
+        $("#thumbnail-container img").css("border", "1px solid #ccc");
+        if (jQuery(this).hasClass('play')) {
+            $('.preview-video').addClass('show');
+            $('.preview-video').removeClass('hide');
+            $('.preview-img').removeClass('show');
+            $('.preview-img').addClass('hide');
+        } else {
+            $('.preview-video').addClass('hide');
+            $('.preview-video').removeClass('show');
+            $('.preview-img').removeClass('hide');
+            $('.preview-img').addClass('show');
+
+            var src = $(this).attr("src");
+            $("#preview-enlarged img").attr("src", src);
+        }
+        $(this).css("border", "#fbb20f 2px solid");
+    });
+</script>
+<style type="text/css">
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
+</style>
